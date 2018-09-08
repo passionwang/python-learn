@@ -108,6 +108,18 @@ if __name__ == '__main__':
 	print(result.start())
 	print(result.end())
 	print(result.span())
+	
+	'''
+	group() 匹配的字符串
+	'''
+	str9 = 'ab1cdfg>1a2222b33<'
+	print('-------TEST9: group的用法------')
+	rule = re.compile(r'\w+>\d+[a-z]+(\d+)[a-z]+(\d+)')
+	result = rule.match(str9)
+	print(result.groups())
+	print(result.group(0))
+	print(result.group(1))
+	print(result.group(2))
 		
 	
 	
