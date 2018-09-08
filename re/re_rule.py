@@ -52,6 +52,14 @@ if __name__ == '__main__':
 		print('old:' + str6)
 		print('new:' + str(result_d))
 		
+	print('-----------+?-0或者更多(懒惰型)-------')	
+	str6 = 'angaolaf12"34535235nvl<>aj,f.12/31[4v]lf"mlf'
+	rule_d = re.compile(r'\d+?')
+	result_d = rule_d.findall(str6)
+	if result_d:
+		print('old:' + str6)
+		print('new:' + str(result_d))
+		
 	print('-----------+--1或者更多-------')	
 	str7 = 'angaolaf12"34535235nvl<>aj,f.12/31[4v]lf"mlf'
 	rule_d = re.compile(r'\d+')
