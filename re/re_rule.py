@@ -117,6 +117,22 @@ if __name__ == '__main__':
 		print('old:' + str13)
 		print('new:' + str(result_d))
 		
+	print('-----------"------------------------')	
+	str15 = 'anga o la   f12"34   53523 5nvl<>aj,f.12/31[4v]lf"mlf'
+	rule_d = re.compile(r'"')
+	result_d = rule_d.findall(str15)
+	if result_d:
+		print('old:' + str15)
+		print('new:' + str(result_d))
+		
+	print('-----------\b---匹配边界-------------')	
+	str16 = 'i am a cat you are cattoo'
+	rule_d = re.compile(r'\bcat\b')
+	result_d = rule_d.findall(str16)
+	if result_d:
+		print('old:' + str16)
+		print('new:' + str(result_d))
+		
 	
 		
 	
