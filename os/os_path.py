@@ -63,4 +63,36 @@ if __name__ == '__main__':
 	b_result = os.path.isabs(os.path.abspath('.'))
 	print(b_result)
 	
+	#os.path.relpath(path, start)将返回从start路径到path的相对路径的字符串
+	print('os.path.relpath()'.center(gloab_num, gloab_char))
+	os.chdir('E:/python\\python_learn')
+	relpath = os.path.relpath('E:/python\\python_learn', 'E:/python')
+	print(relpath)
 	
+	#分割一个完全的路径信息
+	print('分割信息：'.center(gloab_num, gloab_char))
+	str = 'E:\\python\\python_learn\\os\\os_path.py'
+	print(str)
+	dir = os.path.dirname(str)
+	print(dir)
+	name = os.path.basename(str)
+	print(name)
+	tuple_dir_name = os.path.split(str)
+	print(tuple_dir_name)
+	tuple_sep = str.split(os.path.sep)
+	print(tuple_sep)
+	
+	#获得文件大小和列表
+	print('os.path.getsize()'.center(gloab_num, gloab_char))
+	size = os.path.getsize(str)
+	print(size)
+	print('os.listdir()'.center(gloab_num, gloab_char))
+	str = 'E:\\python\\python_learn\\os'
+	list_info = os.listdir(str)
+	print(list_info)
+	
+	#判断是否存在
+	print('os.path.exists()'.center(gloab_num, gloab_char))
+	print(os.path.exists('C:/Windows'))
+	print(os.path.isdir('C:/Windows'))
+	print(os.path.isfile('E:\\python\\python_learn\\os\\os_path.py'))
