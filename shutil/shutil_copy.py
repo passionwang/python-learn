@@ -14,6 +14,9 @@ if __name__ == '__main__':
 	str = shutil.copy('shutil_copy.py', 'tmp.tmp')
 	print(str)
 	
+	#shutil.copytree 可递归创建
 	print('shutil.copytree(src, des)'.center(gloab_num, gloab_char))
-	str = shutil.copytree('../shutil', './tmp')
+	str = shutil.copytree('../shutil', './tmp/tmp')
 	print(str)
+	
+	
