@@ -15,5 +15,28 @@ if __name__ == '__main__':
 		print(e)
 	os.chdir('E:/python/python_learn/shutil/moveTest')
 	
-	print("Test".center(pub.gloab_num, pub.gloab_char))
-	
+	#移动文件
+	print("Test：移动文件".center(pub.gloab_num, pub.gloab_char))
+	try:
+		shutil.copy('../../os/os_path.py', '../../os/os_path1.py')
+		shutil.move('../../os/os_path1.py', './')
+		print('移动文件成功')
+	except Exception as e:
+		print(e)
+		
+	#改名
+	print('Test: 改名'.center(pub.gloab_num, pub.gloab_char))
+	try:
+		shutil.move('os_path1.py', 'os_rename.py')
+		print('改名成功')
+	except Exception as e:
+		print(e)
+		
+	#移动文件夹，文件夹不存在会创建
+	print('Test:移动文件夹'.center(pub.gloab_num, pub.gloab_char))
+	try:
+		shutil.copytree('../../project', '../../project1')
+		shutil.move('../../project1', './egg/egg/')
+	except Exception as e:
+		print(e)
+		
